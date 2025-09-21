@@ -1,0 +1,111 @@
+
+[
+  {
+    "id": "clean-water-initiative",
+    "title": "Clean Water for Rural Villages",
+    "description": "Our mission is to bring clean and safe drinking water to remote villages. By building wells and providing water purification systems, we can drastically reduce waterborne diseases and improve overall health. Your donation helps purchase materials and fund the construction, giving communities a sustainable source of fresh water.",
+    "category": "Health",
+    "tags": ["Water", "Africa", "Health"],
+    "goalAmount": 25000,
+    "raisedAmount": 17500,
+    "images": [
+      "https://picsum.photos/seed/health1/600/400",
+      "https://picsum.photos/seed/africa/600/400"
+    ],
+    "deadline": "2024-12-31T23:59:59Z",
+    "ngo": {
+      "name": "AquaLife Foundation",
+      "logo": "https://picsum.photos/seed/logo1/100/100"
+    }
+  },
+  {
+    "id": "future-coders-bootcamp",
+    "title": "Future Coders Bootcamp for Underprivileged Youth",
+    "description": "Technology is the future. We're providing free coding bootcamps to empower underprivileged youth with valuable skills in web development, mobile app creation, and data science. Your support provides laptops, internet access, and mentorship, opening doors to new career opportunities.",
+    "category": "Education",
+    "tags": ["Technology", "Youth", "Education"],
+    "goalAmount": 50000,
+    "raisedAmount": 45000,
+    "images": [
+      "https://picsum.photos/seed/education1/600/400",
+      "https://picsum.photos/seed/coding/600/400"
+    ],
+    "deadline": "2024-11-30T23:59:59Z",
+    "ngo": {
+      "name": "Code for Tomorrow",
+      "logo": "https://picsum.photos/seed/logo3/100/100"
+    }
+  },
+  {
+    "id": "reforest-the-amazons",
+    "title": "Reforest the Amazons, One Tree at a Time",
+    "description": "The Amazon rainforest is vital to our planet's health, but it's under threat. We're working with local communities to plant native tree species and restore deforested areas. Each dollar you donate plants another tree, helping combat climate change and protect biodiversity.",
+    "category": "Environment",
+    "tags": ["Reforestation", "Climate Change", "Amazon"],
+    "goalAmount": 100000,
+    "raisedAmount": 32000,
+    "images": [
+      "https://picsum.photos/seed/env1/600/400",
+      "https://picsum.photos/seed/amazon/600/400"
+    ],
+    "deadline": "2025-03-22T23:59:59Z",
+    "ngo": {
+      "name": "Green Earth Alliance",
+      "logo": "https://picsum.photos/seed/logo2/100/100"
+    }
+  },
+  {
+    "id": "disaster-relief-fund",
+    "title": "Emergency Relief for Hurricane Victims",
+    "description": "Recent hurricanes have left thousands without homes, food, or clean water. Our rapid-response teams are on the ground providing essential aid, including emergency shelter, medical supplies, and meals. Your immediate support is crucial to helping families recover and rebuild their lives.",
+    "category": "Disaster Relief",
+    "tags": ["Emergency", "Humanitarian", "Relief"],
+    "goalAmount": 75000,
+    "raisedAmount": 61000,
+    "images": [
+      "https://picsum.photos/seed/disaster1/600/400",
+      "https://picsum.photos/seed/relief/600/400"
+    ],
+    "deadline": "2024-10-15T23:59:59Z",
+    "ngo": {
+      "name": "Global Aid Response",
+      "logo": "https://picsum.photos/seed/logo1/100/100"
+    }
+  },
+  {
+    "id": "community-kitchen",
+    "title": "Nourish Our Neighbors: Community Kitchen",
+    "description": "No one should go hungry in our community. Our community kitchen provides hot, nutritious meals to homeless individuals and low-income families every single day. Your donation helps us purchase fresh ingredients and keep our kitchen running, offering a warm meal and a sense of hope.",
+    "category": "Community",
+    "tags": ["Hunger", "Local", "Support"],
+    "goalAmount": 15000,
+    "raisedAmount": 14200,
+    "images": [
+      "https://picsum.photos/seed/community1/600/400",
+      "https://picsum.photos/seed/food/600/400"
+    ],
+    "deadline": "2024-11-20T23:59:59Z",
+    "ngo": {
+      "name": "The Helping Hand",
+      "logo": "https://picsum.photos/seed/logo3/100/100"
+    }
+  },
+  {
+    "id": "mobile-medical-clinic",
+    "title": "Mobile Medical Clinic for Remote Areas",
+    "description": "Healthcare should be accessible to everyone. Our mobile medical clinic travels to isolated communities to provide free check-ups, vaccinations, and essential medical care to those who cannot reach a hospital. Support our clinic on wheels and bring healthcare where it's needed most.",
+    "category": "Health",
+    "tags": ["Healthcare", "Rural", "Medical"],
+    "goalAmount": 60000,
+    "raisedAmount": 28000,
+    "images": [
+      "https://picsum.photos/seed/health2/600/400",
+      "https://picsum.photos/seed/clinic/600/400"
+    ],
+    "deadline": "2025-01-31T23:59:59Z",
+    "ngo": {
+      "name": "HealthReach International",
+      "logo": "https://picsum.photos/seed/logo1/100/100"
+    }
+  }
+]

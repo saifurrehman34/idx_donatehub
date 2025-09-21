@@ -1,3 +1,71 @@
+
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "campaign-education-1",
+      "description": "Children reading books in a classroom.",
+      "imageUrl": "https://picsum.photos/seed/education1/600/400",
+      "imageHint": "children classroom"
+    },
+    {
+      "id": "campaign-education-2",
+      "description": "A student writing on a chalkboard.",
+      "imageUrl": "https://picsum.photos/seed/education2/600/400",
+      "imageHint": "student chalkboard"
+    },
+    {
+      "id": "campaign-health-1",
+      "description": "A doctor checking a patient's heartbeat.",
+      "imageUrl": "https://picsum.photos/seed/health1/600/400",
+      "imageHint": "doctor patient"
+    },
+    {
+      "id": "campaign-health-2",
+      "description": "A close-up of medical equipment in a lab.",
+      "imageUrl": "https://picsum.photos/seed/health2/600/400",
+      "imageHint": "medical lab"
+    },
+    {
+      "id": "campaign-environment-1",
+      "description": "Volunteers planting trees in a field.",
+      "imageUrl": "https://picsum.photos/seed/env1/600/400",
+      "imageHint": "planting trees"
+    },
+    {
+      "id": "campaign-environment-2",
+      "description": "A pristine beach with clear water.",
+      "imageUrl": "https://picsum.photos/seed/env2/600/400",
+      "imageHint": "clean beach"
+    },
+    {
+      "id": "campaign-disaster-1",
+      "description": "Emergency supplies being distributed after a flood.",
+      "imageUrl": "https://picsum.photos/seed/disaster1/600/400",
+      "imageHint": "emergency supplies"
+    },
+    {
+      "id": "campaign-community-1",
+      "description": "A group of people building a house.",
+      "imageUrl": "https://picsum.photos/seed/community1/600/400",
+      "imageHint": "community building"
+    },
+    {
+      "id": "ngo-logo-1",
+      "description": "Logo for a charity organization.",
+      "imageUrl": "https://picsum.photos/seed/logo1/100/100",
+      "imageHint": "charity logo"
+    },
+    {
+      "id": "ngo-logo-2",
+      "description": "Logo for an environmental group.",
+      "imageUrl": "https://picsum.photos/seed/logo2/100/100",
+      "imageHint": "nature logo"
+    },
+    {
+      "id": "ngo-logo-3",
+      "description": "Logo for an education foundation.",
+      "imageUrl": "https://picsum.photos/seed/logo3/100/100",
+      "imageHint": "education logo"
+    }
+  ]
 }
