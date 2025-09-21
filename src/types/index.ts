@@ -13,3 +13,11 @@ export type Campaign = {
     logo: string;
   };
 };
+
+export type User = {
+  id: string;
+  name: string;
+  email: string;
+  password?: string; // Should be handled securely on a real backend
+  role: 'donor' | 'ngo';
+};

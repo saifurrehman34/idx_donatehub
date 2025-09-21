@@ -1,0 +1,31 @@
+
+[
+  {
+    "id": "donor-1",
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "password": "password123",
+    "role": "donor"
+  },
+  {
+    "id": "donor-2",
+    "name": "Bob Williams",
+    "email": "bob@example.com",
+    "password": "password123",
+    "role": "donor"
+  },
+  {
+    "id": "ngo-1",
+    "name": "Green Earth Alliance",
+    "email": "contact@greenearth.org",
+    "password": "password123",
+    "role": "ngo"
+  },
+  {
+    "id": "ngo-2",
+    "name": "Code for Tomorrow",
+    "email": "admin@codefortomorrow.dev",
+    "password": "password123",
+    "role": "ngo"
+  }
+]

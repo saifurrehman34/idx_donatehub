@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, HandHeart } from "lucide-react";
+import { Menu, HandHeart, UserCircle, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
@@ -13,6 +13,9 @@ const navLinks = [
   { href: "/ai-tools", label: "AI Tools for NGOs" },
   { href: "/contact", label: "Contact" },
 ];
+
+// This is a placeholder for auth status
+const FAKE_USER_LOGGED_IN = false; 
 
 export function Header() {
   const pathname = usePathname();
@@ -45,9 +48,27 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end md:hidden">
+        <div className="flex flex-1 items-center justify-end gap-4">
+          <div className="hidden md:flex items-center gap-4">
+            {FAKE_USER_LOGGED_IN ? (
+              <Button variant="ghost" asChild>
+                <Link href="/dashboard">
+                  <UserCircle className="mr-2 h-5 w-5" />
+                  Dashboard
+                </Link>
+              </Button>
+            ) : (
+              <Button asChild>
+                <Link href="/login">
+                  <LogIn className="mr-2 h-5 w-5" />
+                  Login / Register
+                </Link>
+              </Button>
+            )}
+          </div>
+
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild>
+            <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
@@ -58,6 +79,18 @@ export function Header() {
                 {navLinks.map((link) => (
                   <NavLink key={link.href} {...link} />
                 ))}
+
+                <hr/>
+
+                {FAKE_USER_LOGGED_IN ? (
+                   <Link href="/dashboard" className="flex items-center gap-2 text-muted-foreground hover:text-primary" onClick={() => setSheetOpen(false)}>
+                      <UserCircle className="h-5 w-5" /> Dashboard
+                   </Link>
+                ) : (
+                  <Link href="/login" className="flex items-center gap-2 text-muted-foreground hover:text-primary" onClick={() => setSheetOpen(false)}>
+                    <LogIn className="h-5 w-5" /> Login / Register
+                  </Link>
+                )}
               </nav>
             </SheetContent>
           </Sheet>
