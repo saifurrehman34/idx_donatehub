@@ -1,17 +1,31 @@
-// For now, this is a placeholder UI-only component.
-// In the next step, we'll wire it up.
 "use client";
 
+import { useFormState, useFormStatus } from "react-dom";
+import { registerUser } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Link from "next/link";
+import { AlertCircle, Loader2 } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+
+function RegisterButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" className="w-full" disabled={pending}>
+      {pending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      Create Account
+    </Button>
+  );
+}
 
 export function RegisterForm() {
+  const [errorMessage, dispatch] = useFormState(registerUser, undefined);
+
   return (
-    <form>
+    <form action={dispatch}>
       <Card className="shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl font-headline">Register</CardTitle>
@@ -33,7 +47,7 @@ export function RegisterForm() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" name="password" required />
+            <Input id="password" type="password" name="password" required minLength={6} />
           </div>
           <div className="space-y-2">
             <Label>I am a...</Label>
@@ -48,11 +62,16 @@ export function RegisterForm() {
               </div>
             </RadioGroup>
           </div>
+          {errorMessage && (
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Registration Failed</AlertTitle>
+              <AlertDescription>{errorMessage}</AlertDescription>
+            </Alert>
+          )}
         </CardContent>
         <CardFooter className="flex-col gap-4">
-          <Button type="submit" className="w-full">
-            Create Account
-          </Button>
+          <RegisterButton />
           <p className="text-sm text-muted-foreground">
             Already have an account?{' '}
             <Link href="/login" className="font-semibold text-primary hover:underline">

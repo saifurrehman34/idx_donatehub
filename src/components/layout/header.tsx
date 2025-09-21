@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, HandHeart, UserCircle, LogIn } from "lucide-react";
+import { Menu, HandHeart, UserCircle, LogIn, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { type User } from "@/types";
+import { logout } from "@/actions/auth";
 
 const navLinks = [
   { href: "/", label: "Campaigns" },
@@ -14,10 +16,7 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-// This is a placeholder for auth status
-const FAKE_USER_LOGGED_IN = false; 
-
-export function Header() {
+export function Header({ user }: { user: User | null }) {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
 
@@ -50,13 +49,21 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex items-center gap-4">
-            {FAKE_USER_LOGGED_IN ? (
-              <Button variant="ghost" asChild>
-                <Link href="/dashboard">
-                  <UserCircle className="mr-2 h-5 w-5" />
-                  Dashboard
-                </Link>
-              </Button>
+            {user ? (
+              <>
+                <Button variant="ghost" asChild>
+                  <Link href="/dashboard">
+                    <UserCircle className="mr-2 h-5 w-5" />
+                    Dashboard
+                  </Link>
+                </Button>
+                <form action={logout}>
+                  <Button variant="outline" type="submit">
+                    <LogOut className="mr-2 h-5 w-5" />
+                    Logout
+                  </Button>
+                </form>
+              </>
             ) : (
               <Button asChild>
                 <Link href="/login">
@@ -82,10 +89,17 @@ export function Header() {
 
                 <hr/>
 
-                {FAKE_USER_LOGGED_IN ? (
-                   <Link href="/dashboard" className="flex items-center gap-2 text-muted-foreground hover:text-primary" onClick={() => setSheetOpen(false)}>
-                      <UserCircle className="h-5 w-5" /> Dashboard
-                   </Link>
+                {user ? (
+                   <>
+                    <Link href="/dashboard" className="flex items-center gap-2 text-muted-foreground hover:text-primary" onClick={() => setSheetOpen(false)}>
+                        <UserCircle className="h-5 w-5" /> Dashboard
+                    </Link>
+                    <form action={logout}>
+                        <Button variant="ghost" className="w-full justify-start gap-2 text-muted-foreground hover:text-primary px-0 text-lg">
+                            <LogOut className="h-5 w-5" /> Logout
+                        </Button>
+                    </form>
+                   </>
                 ) : (
                   <Link href="/login" className="flex items-center gap-2 text-muted-foreground hover:text-primary" onClick={() => setSheetOpen(false)}>
                     <LogIn className="h-5 w-5" /> Login / Register

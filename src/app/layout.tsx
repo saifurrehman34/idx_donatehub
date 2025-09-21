@@ -4,17 +4,20 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { getUser } from '@/lib/auth';
 
 export const metadata: Metadata = {
   title: 'DonateLight',
   description: 'A platform for NGOs and donors to connect for charity campaigns.',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const user = await getUser();
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -23,7 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
-        <Header />
+        <Header user={user} />
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
